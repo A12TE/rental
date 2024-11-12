@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+              <nav class="navbar bg-dark navbar-dark  fs-5" style="min-height: 100vh;">
+                 
+        <ul class="navbar-nav ms-1 p-4 sub-menu">
+            
+            <li class="nav-item"><a routerLink="" class="navbar-brand fs-4"><i class="fa fa-home"></i>Welcome {{username | uppercase}}</a></li>
+            <li class="nav-item"><a routerLink="cars" class="nav-link"><i class="fa fa-car"></i>Car</a></li>
+            <li class="nav-item"><a routerLink="bike" class="nav-link"><i class="fa fa-bicycle"></i>Bikes</a></li>
+            <li class="nav-item"><a routerLink="viewvehicle" class="nav-link"><i class="fa fa-cart-shopping"></i>View Vehicles</a></li>
+            <li class="nav-item"><a routerLink="" class="nav-link"><i class="fa fa-cart-shopping"></i>View Orders</a></li>
+            <li class="nav-item"><a routerLink="" class="nav-link"><i class="fa fa-bookmark"></i>Booking</a></li>
+            <li class="nav-item"><a routerLink="wishlist" class="nav-link"><i class="fa fa-heart"></i>Wishlist<span class="ms-2 badge bg-danger">{{len}}</span></a></li>
+          
+        </ul>          
+              </nav>
+        </div>
+        <div class="col-md-9">
+              <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

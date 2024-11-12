@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-5" *ngFor="let a of bikes">
+         <a routerLink="#" class="href" (click)="openvehicle(a.vehicleId)">
+           <div class="card">
+                 <div class="card-header">
+                     <img [src]="a.vehicleImage" alt="" width="450" height="500">
+                 </div>
+                 <div class="card-body">
+                     <h4 >{{a.vehicleName}}</h4>
+                     <p>{{a.vehiclePrice}}</p>
+                 </div>
+           </div>
+         </a>
+    </div>
+</div>

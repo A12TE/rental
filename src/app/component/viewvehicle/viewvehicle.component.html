@@ -1,0 +1,60 @@
+<div class="row" *ngIf="vehicle">
+    <div class="col-md-5">
+        <div class="card">
+              <div class="card-header">
+                  <img [src]="vehicle.vehicleImage" width="400px" height="400px" alt="">
+              </div>
+              <div class="card-body">
+                   <h1>{{vehicle.vehicleId}}</h1>
+                   <p>{{vehicle.vehicleName}}</p>
+              </div>
+              <div class="card-footer">
+ <button class="btn btn-primary" (click)="addtowishlist(vehicle)" >Wishlist </button>
+ <button class="btn btn-danger ms-2" data-bs-target="#mymodal" data-bs-toggle="modal" (click)="openorder(vehicle)">Booknow</button>
+                                 
+                </div>
+        </div>
+        
+   </div>
+</div>
+<div class="modal fade" id="mymodal" *ngIf="vehicle">
+    <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                   <h1>Order Now</h1>
+                   <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <form action="" (ngSubmit)="ordernow()">
+               <div class="form-group">
+                <label for="" class="form-label">vehicleId</label>
+                <input type="text" class="form-control" name="vid" [(ngModel)]="orderedvehicles.vehicleId">
+            </div>
+               <div class="form-group">
+                <label for="" class="form-label">vehiclename</label>
+                <input type="text" class="form-control" name="vname" [(ngModel)]="orderedvehicles.vehicleName" >
+            </div>
+               <div class="form-group">
+                <label for="" class="form-label">vehicleprice</label>
+                <input type="text" class="form-control" name="vprice" [(ngModel)]="orderedvehicles.vehiclePrice">
+            </div>
+               <div class="form-group">
+                <label for="" class="form-label">uname</label>
+                <input type="text" class="form-control" name="username" [(ngModel)]="uname">
+            </div>
+               <div class="form-group">
+                <label for="" class="form-label">address</label>
+                <input type="text" class="form-control" name="useraddress" [(ngModel)]="uaddress">
+            </div>
+               <div class="form-group">
+                <label for="" class="form-label">time</label>
+                <input type="text" class="form-control" name="time" [(ngModel)]="utime" >
+            </div>
+            <div class="form-group">
+                  <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Order Now</button>
+            </div>
+        </form>
+              </div>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.sub-menu>li{
+     padding: 15px;
+     
+}
+.sub-menu>li>a>i{
+       padding: 10px;
+       color:aliceblue;
+}

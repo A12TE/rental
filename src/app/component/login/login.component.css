@@ -1,0 +1,20 @@
+.con{
+     background-color: rgba(223, 241, 222, 0.823);
+   
+    filter: brightness(100%);
+}
+.img-fluid{
+     width: 80%;
+     height: 810px;
+}
+.button-1{
+     width: 25%;
+     height: 25%;
+}
+.login-head{ 
+      margin-top: 150px;
+      width: 450px;
+      height: 400px;
+      border: 2px solid black;  
+      backdrop-filter: blur(px);  
+}
